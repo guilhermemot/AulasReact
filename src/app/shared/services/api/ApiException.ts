@@ -1,9 +1,9 @@
 export class ApiException extends Error{
     public readonly message: string = '';
-    constructor(messege: string){
+    constructor(message: string){
         super();
 
-        this.message = messege;
+        this.message = message;
 
     }
 }

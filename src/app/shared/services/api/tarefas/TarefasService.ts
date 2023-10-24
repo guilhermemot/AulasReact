@@ -42,7 +42,7 @@ const updateById = async (id: string, dataToUpdate: ITarefa): Promise<ITarefa | 
 };
 const deleteById = async (id: string): Promise<undefined | ApiException> => {
     try{
-    const { data } = await Api().get(`/tarefas/${id}`);
+    await Api().get(`/tarefas/${id}`);
     return undefined;
     }catch(error: any){
         return new ApiException(error.message || 'Erro ao apagar o registro.');
